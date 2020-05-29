@@ -66,7 +66,7 @@ class Movie extends Component {
         const movies = paginate(sorted, currentPage, pageSize);
 
         return (
-            <main className="container row">
+            <main className="container row m-2">
                 <div className="col-3">
                     <ListGroup
                         items={this.state.genres}
