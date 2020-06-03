@@ -1,33 +1,30 @@
 import React, {Component} from 'react';
-import {Route, Switch} from 'react-router-dom'
-import Movie from "./components/Movie";
-import NavBar from "./components/NavBar";
-import Products from "./components/products";
-import Post from "./components/post";
-import Dashboard from "./components/dashboard";
-import Home from "./components/Home";
-import ProductDetails from "./components/Products/productDetails";
-import ProductDetails2 from "./components/Products/productDetails2";
-import ProductDetails3 from "./components/Products/productDetails3";
+import {Route, Switch, Redirect} from 'react-router-dom'
+import NavBar from "./components/navBar";
+import Movie from "./components/movie";
+import MovieForm from "./components/MovieForm";
+import Customers from "./components/customers";
+import Rentals from "./components/rentals";
+import NotFound from "./components/notFound";
 import './App.css';
-
 
 class App extends Component {
     render() {
         return (
-            <div>
+            <>
                 <NavBar/>
-                <div className="content">
+                <main className="container">
                     <Switch>
-                        <Route path="/products/:id" component={ProductDetails}/>
-                        <Route path="/products" render={(props) => <Products sortBy="newest" {...props}/>}/>
-                        <Route path="/movie" component={Movie}/>
-                        <Route path="/post/:year/:month" component={Post}/>
-                        <Route path="/admin" component={Dashboard}/>
-                        <Route path="/" component={Home}/>
+                        <Route path="/movies/:id" component={MovieForm}/>
+                        <Route path="/movies" component={Movie}/>
+                        <Route path="/customers" component={Customers}/>
+                        <Route path="/rentals" component={Rentals}/>
+                        <Route path="/not-found" component={NotFound}/>
+                        <Redirect from="/" exact to="/movies"/>
+                        <Redirect to="/not-found"/>
                     </Switch>
-                </div>
-            </div>
+                </main>
+            </>
         );
     }
 }
