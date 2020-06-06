@@ -27,7 +27,6 @@ class MoviesTable extends Component {
                 Delete
             </button>
         }
-
     ];
 
     render() {
