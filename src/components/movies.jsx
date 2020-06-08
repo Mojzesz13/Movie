@@ -8,7 +8,7 @@ import {paginate} from "../utilis/paginate";
 import _ from "lodash";
 import {Link} from "react-router-dom";
 
-class Movie extends Component {
+class Movies extends Component {
     state = {
         movies: [],
         genres: [],
@@ -103,4 +103,4 @@ class Movie extends Component {
     }
 }
 
-export default Movie;
+export default Movies;
