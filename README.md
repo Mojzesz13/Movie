@@ -7,3 +7,5 @@ Sorting
 Filtering
 Pagination
 Routing
+Validation form with Joi
+
