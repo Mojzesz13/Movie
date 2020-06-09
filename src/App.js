@@ -3,7 +3,7 @@ import {Route, Switch, Redirect} from 'react-router-dom'
 import NavBar from "./components/navBar";
 import LoginForm from "./components/loginForm";
 import Movies from "./components/movies";
-import MovieForm from "./components/MovieForm";
+import MovieForm from "./components/movieForm";
 import Customers from "./components/customers";
 import Rentals from "./components/rentals";
 import NotFound from "./components/notFound";
