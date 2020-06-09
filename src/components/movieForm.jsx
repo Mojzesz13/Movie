@@ -78,12 +78,9 @@ class MovieForm extends Form {
                     {this.renderInput("dailyRentalRate", "Rate")}
                     {this.renderButton("Save")}
                 </form>
-
             </>
         );
     }
 }
 
 export default MovieForm;
-
-
